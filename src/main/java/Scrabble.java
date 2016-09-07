@@ -1,28 +1,28 @@
-import java.util.List;
-import java.util.ArrayList;
+// import java.util.List;
+// import java.util.ArrayList;
 
 public class Scrabble {
 
   public static Integer runScrabble(String inputWord) {
-    inputWord = inputWord.toUpperCase();
-    String[] inputArray = inputWord.split("");
+    // inputWord = inputWord.toUpperCase();
+    // String[] inputArray = inputWord.split("");
     int score = 0;
-    for (int i = 0; i < inputArray.length; i++){
-      if (inputArray[i].equals("A") || inputArray[i].equals("E") || inputArray[i].equals("I") || inputArray[i].equals("O") || inputArray[i].equals("U") || inputArray[i].equals("L")|| inputArray[i].equals("N") || inputArray[i].equals("R") || inputArray[i].equals("S") || inputArray[i].equals("T")){
+    for (int i = 0; i < inputWord.length(); i++){
+      if (inputWord.charAt(i) == 'a' || inputWord.charAt(i) == 'e' || inputWord.charAt(i) == 'i' || inputWord.charAt(i) == 'o' || inputWord.charAt(i) == 'u' || inputWord.charAt(i) == 'l'|| inputWord.charAt(i) == 'n' || inputWord.charAt(i) == 'r' || inputWord.charAt(i) == 's' || inputWord.charAt(i) == 't'){
         score += 1;
-      } else if (inputArray[i].equals("D") || inputArray[i].equals("G")){
+      } else if (inputWord.charAt(i) == 'd' || inputWord.charAt(i) == 'g'){
         score += 2;
       }
-      else if (inputArray[i].equals("B") || inputArray[i].equals("C")|| inputArray[i].equals("M") || inputArray[i].equals("P")){
+      else if (inputWord.charAt(i) == 'b' || inputWord.charAt(i) == 'c'|| inputWord.charAt(i) == 'm' || inputWord.charAt(i) == 'p'){
         score += 3;
-      } else if (inputArray[i].equals("F") || inputArray[i].equals("H")|| inputArray[i].equals("V") || inputArray[i].equals("W")|| inputArray[i].equals("Y")){
+      } else if (inputWord.charAt(i) == 'f' || inputWord.charAt(i) == 'h'|| inputWord.charAt(i) == 'v' || inputWord.charAt(i) == 'w'|| inputWord.charAt(i) == 'y'){
         score += 4;
-      } else if (inputArray[i].equals("K")){
+      } else if (inputWord.charAt(i) == 'k'){
         score += 5;
       }
-      else if (inputArray[i].equals("J") || inputArray[i].equals("X")){
+      else if (inputWord.charAt(i) == 'j' || inputWord.charAt(i) == 'x'){
         score += 8;
-      } else if (inputArray[i].equals("Q") || inputArray[i].equals("Z")){
+      } else if (inputWord.charAt(i) == 'q' || inputWord.charAt(i) == 'z'){
         score += 10;
       }
 
